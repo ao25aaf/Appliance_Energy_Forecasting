@@ -1,19 +1,21 @@
 # Appliance Energy Forecasting
 
-A time-series case study comparing five benchmark models, SARIMAX, a tuned XGBoost
-feature-based model, and a genuine Chronos-2 foundation-model forecast, on the UCI
-**Appliances Energy Prediction** dataset.
+This time-series case study compares five benchmark models, a fine-tuned feature-based
+XGBoost model, and one true forecasting model (Chronos-2) on the UCI **Appliances Energy** 
+**Prediction** dataset.
 
 ## Project aim
 
-Forecast short-term household appliance energy use and evaluate whether
-increasingly complex models actually improve on simple benchmarks, and by how much.
+The objective is to predict short-term household energy demand and understand whether
+and to what extent more sophisticated models benefit from the complexity compared to 
+simple baselines.
 
 ## Key result
 
-Every model is evaluated with a genuine **rolling 24-hour forecast**: 14 separate
-forecasts across the held-out 14-day test period, each built only from history that
-would truly be known at that point (never a model's own prior output). Final ranking:
+For each model, a realistic 24-hour-ahead forecast was generated using 14 rolling forecasts
+on a hold-out 14-day test set - meaning that each prediction used only the data available
+before the forecast horizon began (no look-ahead). Finally, scores were compared to rank the
+models from best to worst.
 
 | Model | MASE | Notes |
 |---|---|---|
