@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+scipy
+scikit-learn
+statsmodels
+xgboost
+pytest
+flake8
+
+# Required only for the genuine Chronos-2 foundation model (notebook 06):
+torch
+chronos-forecasting
